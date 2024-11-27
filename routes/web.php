@@ -54,3 +54,8 @@ Route::middleware([
         return Inertia::render('Dashboard');
     })->name('dashboard');
 });
+
+Route::post('/member', [adminController::class, 'store'])->name('member.store');
+
+// Route for Fetching Trainers via AJAX
+Route::get('/get-trainers', [adminController::class, 'getTrainers'])->name('getTrainers');

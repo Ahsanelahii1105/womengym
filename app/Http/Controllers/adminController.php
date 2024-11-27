@@ -71,11 +71,10 @@ class adminController extends Controller
         return redirect()->back()->with('success', 'Course added successfully.');
     }
 
-    // Dynamic Trainer Fetching
-    public function fetchTrainers($courseId)
+
+    public function getTrainers()
     {
-        $course = course::findOrFail($courseId); // Course ID ke basis par course find karein
-        $trainers = $course->trainers; // Trainers jo iss course se jude hain
-        return response()->json($trainers); // Trainers ko JSON format mein return karein
+        $trainers = Trainer::all(['id', 'name']); // Fetch only the required fields
+        return response()->json($trainers);
     }
-}
+    }

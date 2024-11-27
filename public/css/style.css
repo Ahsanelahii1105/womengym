@@ -634,7 +634,7 @@ h1, h2, h3, h4, h5,
 .intro-section-member {
     position: relative; }
     .intro-section-member, .intro-section-member .container-fluid .row {
-       height: 150vh;
+       /* height: 150vh; */
       background-image: url('../images/members.jpg');
       background-repeat: no-repeat;
       width: 100%;

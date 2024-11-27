@@ -78,6 +78,7 @@
 
         </header>
 
+
             @yield('content')
 
         <footer class="footer-section">
@@ -135,7 +136,6 @@
                 </div>
             </div>
         </footer>
-
     </div>
     <!-- .site-wrap -->
 
